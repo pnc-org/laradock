@@ -1076,5 +1076,11 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     rm /var/log/lastlog /var/log/faillog
 
+# Include keys for deployment.
+COPY ./.ssh /home/laradock/.ssh
+RUN chown -R laradock:laradock /home/laradock/.ssh && \
+    chmod 0700 /home/laradock/.ssh && \
+    chmod 0700 /home/laradock/.ssh/id_rsa*
+
 # Set default work directory
 WORKDIR /var/www

@@ -6,7 +6,6 @@ LABEL maintainer="Mahmoud Zalt <mahmoud@zalt.me>"
 
 VOLUME /data/db /data/configdb
 
-CMD ["mongod"]
+CMD ["mongod", "--auth"]
 
 EXPOSE 27017
-
