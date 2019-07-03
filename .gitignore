@@ -5,6 +5,7 @@
 /.project
 .docker-sync
 /jenkins/jenkins_home
+/workspace/.ssh
 
 /logstash/pipeline/*.conf
 /logstash/config/pipelines.yml
